@@ -1,3 +1,9 @@
-from django.contrib import admin
+from django.contrib.admin import ModelAdmin, register, StackedInline
+from .models import Category, Product, ProductImage
 
-# Register your models here.
+
+class ProductImageStackedInline(StackedInline):
+    model = ProductImage
+    fields = 'image', 'product'
+
+
