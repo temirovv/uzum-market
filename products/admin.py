@@ -9,9 +9,8 @@ class ProductImageStackedInline(StackedInline):
 
 @register(Product)
 class ProductModelAdmin(ModelAdmin):
-    # inlines = [ProductImageStackedInline, ]
-    # inlines = (ProductImageStackedInline, )
     inlines = ProductImageStackedInline, 
+    list_display = 'name', 'category', 'price', 'quantity'
 
 
 @register(Category)
