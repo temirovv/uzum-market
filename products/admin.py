@@ -1,5 +1,5 @@
 from django.contrib.admin import ModelAdmin, register, StackedInline
-from .models import Category, Product, ProductImage
+from .models import Category, Product, ProductImage, Color
 
 
 class ProductImageStackedInline(StackedInline):
@@ -7,9 +7,14 @@ class ProductImageStackedInline(StackedInline):
     fields = 'image', 'product'
 
 
+class ColorStackedInline(StackedInline):
+    model = Color
+    fields = 'name', 'product'
+
+
 @register(Product)
 class ProductModelAdmin(ModelAdmin):
-    inlines = ProductImageStackedInline, 
+    inlines = ProductImageStackedInline, ColorStackedInline
     list_display = 'name', 'category', 'price', 'quantity'
 
 

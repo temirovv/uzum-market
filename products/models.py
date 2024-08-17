@@ -19,7 +19,6 @@ class Product(Model):
     name = CharField(max_length=1000)
     price = FloatField()
     discount = PositiveIntegerField()
-    color = CharField(max_length=30, null=True, blank=True)
     short_description = TextField()
     description = TextField()
     quantity = PositiveIntegerField(default=1)
@@ -28,6 +27,15 @@ class Product(Model):
     def __str__(self) -> str:
         return self.name
 
+    @property
+    def first_image(self):
+        
+
 class ProductImage(Model):
     image = ImageField(upload_to='products')
     product = ForeignKey('products.Product', CASCADE, related_name='images')
+
+
+class Color(Model):
+    name = CharField(max_length=20)
+    product = ForeignKey('products.Product', CASCADE, related_name='colors')
