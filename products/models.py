@@ -29,7 +29,7 @@ class Product(Model):
 
     @property
     def first_image(self):
-        
+        return self.images.all().first()
 
 class ProductImage(Model):
     image = ImageField(upload_to='products')
