@@ -24,12 +24,21 @@ class Product(Model):
     quantity = PositiveIntegerField(default=1)
     category = ForeignKey('products.Category', CASCADE, related_name='products')
     
+
     def __str__(self) -> str:
         return self.name
 
     @property
     def first_image(self):
         return self.images.all().first()
+
+    @property
+    def get_price(self):
+        if self.discount:
+            price = self.price - (self.price*self.discount)/100
+            return price
+        
+        return self.price
 
 class ProductImage(Model):
     image = ImageField(upload_to='products')
