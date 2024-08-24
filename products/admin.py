@@ -1,5 +1,8 @@
 from django.contrib.admin import ModelAdmin, register, StackedInline
-from .models import Category, Product, ProductImage, Color
+
+from .models import (
+    Category, Product, ProductImage, 
+    Color, Cart, CartItem, Order, OrderItem)
 
 
 class ProductImageStackedInline(StackedInline):
@@ -20,4 +23,23 @@ class ProductModelAdmin(ModelAdmin):
 
 @register(Category)
 class CategoryModelAdmin(ModelAdmin):
+    pass
+
+
+@register(Cart)
+class CartModelAdmin(ModelAdmin):
+    pass
+
+
+@register(CartItem)
+class CartItemModelAdmin(ModelAdmin):
+    pass
+
+
+@register(Order)
+class OrderModelAdmin(ModelAdmin):
+    pass
+
+@register(OrderItem)
+class OrderItemModelAdmin(ModelAdmin):
     pass
