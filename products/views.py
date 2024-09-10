@@ -1,8 +1,9 @@
 import json
 
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
 from django.http import JsonResponse
-from django.shortcuts import get_object_or_404
+from django.contrib.auth.models import AnonymousUser
+from django.contrib import messages
 
 from .models import Product, Cart, CartItem
 
@@ -45,3 +46,22 @@ def add_to_cart(request):
         return JsonResponse(data={'status':'okey'})
 
     return JsonResponse(data={'status':'error'})
+
+
+def user_cart(request):
+    if request.method == "GET":
+        user = request.user
+
+        if isinstance(user, AnonymousUser):
+            messages.info(request, "Oldin login qilgin {}")
+            return redirect("users:login")
+
+        cart = Cart.objects.get(user=user, is_active=True)
+        context = {
+            'cart': cart
+        }
+
+        return render(
+            request, 
+            template_name='products/user_cart.html', 
+            context=context)
