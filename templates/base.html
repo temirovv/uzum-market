@@ -51,7 +51,11 @@
                   <a href="{% url 'user_cart' %}">
                     <i class="bi bi-bag-check"></i>
                   </a>
+                  
                 </button>
+                <a href="{% url 'users:logout' %}">
+                  Logout
+                </a>
                
               {% else %} 
                 <a href="{% url 'users:login' %}">Login</a> 
