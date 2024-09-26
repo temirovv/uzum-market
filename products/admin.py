@@ -1,4 +1,4 @@
-from django.contrib.admin import ModelAdmin, register, StackedInline
+from django.contrib.admin import ModelAdmin, register, StackedInline, display
 
 from .models import (
     Category, Product, ProductImage, 
@@ -18,7 +18,16 @@ class ColorStackedInline(StackedInline):
 @register(Product)
 class ProductModelAdmin(ModelAdmin):
     inlines = ProductImageStackedInline, ColorStackedInline
-    list_display = 'name', 'category', 'price', 'quantity'
+    list_display = 'name', 'category', 'price', 'quantity', 'bazada_qolgan'
+    list_editable = 'price', 'category', 'quantity'
+    list_filter = 'category', 'price'
+    list_per_page = 1
+
+    @display(ordering='quantity')
+    def bazada_qolgan(self, product):
+        if product.quantity < 10:
+            return "Kam"
+        return "Ko'p"
 
 
 @register(Category)

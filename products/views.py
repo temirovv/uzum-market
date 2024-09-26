@@ -4,12 +4,34 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.http import JsonResponse
 from django.contrib.auth.models import AnonymousUser
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from django.db.models import Q
+
 
 from .models import Product, Cart, CartItem
 
 
 def product_list(request):
     products = Product.objects.all()
+    '''
+    SELECT "products_product"."id",
+        "products_product"."name",
+        "products_product"."price",
+        "products_product"."discount",
+        "products_product"."short_description",
+        "products_product"."description",
+        "products_product"."quantity",
+        "products_product"."category_id"
+    FROM "products_product"
+    '''
+
+
+    search_q = request.GET.get('q')
+    if search_q:
+        products = Product.objects.filter(
+            Q(name__icontains=search_q) | Q(description__icontains=search_q) 
+        )
+
     context = {
         'products': products
     }
@@ -24,6 +46,7 @@ def product_detail(request, id):
     return render(request, 'products/product-detail.html', context=context)
 
 
+@login_required
 def add_to_cart(request):
     if request.method == 'POST':
         data = json.loads(request.body)
