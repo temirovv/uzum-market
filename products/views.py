@@ -9,22 +9,11 @@ from django.db.models import Q
 
 
 from .models import Product, Cart, CartItem
+from users.models import CustomUser, UserTypeChoices
 
 
 def product_list(request):
     products = Product.objects.all()
-    '''
-    SELECT "products_product"."id",
-        "products_product"."name",
-        "products_product"."price",
-        "products_product"."discount",
-        "products_product"."short_description",
-        "products_product"."description",
-        "products_product"."quantity",
-        "products_product"."category_id"
-    FROM "products_product"
-    '''
-
 
     search_q = request.GET.get('q')
     if search_q:
@@ -73,11 +62,15 @@ def add_to_cart(request):
 
 def user_cart(request):
     if request.method == "GET":
-        user = request.user
+
+        user: CustomUser = request.user  # type hinting
 
         if isinstance(user, AnonymousUser):
             messages.info(request, "Oldin login qilgin {}")
             return redirect("users:login")
+
+        if user.user_type == UserTypeChoices.REGULAR:
+            pass
 
         cart = Cart.objects.get(user=user, is_active=True)
         context = {
