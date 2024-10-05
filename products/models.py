@@ -1,12 +1,14 @@
+from typing import Iterable
 from django.db.models import (
     Model,
     CharField, ForeignKey, 
     CASCADE, ImageField,
     PositiveIntegerField, FloatField,
-    TextField, DateTimeField, BooleanField, DecimalField
+    TextField, DateTimeField, BooleanField, DecimalField, SlugField
 )
 from django.contrib.auth import get_user_model
 # from users.models import CustomUser
+from django.template.defaultfilters import slugify
 
 
 User = get_user_model()
@@ -28,7 +30,12 @@ class Product(Model):
     description = TextField()
     quantity = PositiveIntegerField(default=1)
     category = ForeignKey('products.Category', CASCADE, related_name='products')
-    
+    slug = SlugField(unique=True, blank=True, null=True)
+
+    def save(self, *args, **kwargs):
+
+        self.slug = slugify(self.name)
+        super().save(*args, **kwargs)
 
     def __str__(self) -> str:
         return self.name
