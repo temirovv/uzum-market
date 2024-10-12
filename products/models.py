@@ -1,11 +1,16 @@
 from typing import Iterable
-from django.db.models import (
-    Model,
-    CharField, ForeignKey, 
-    CASCADE, ImageField,
-    PositiveIntegerField, FloatField,
-    TextField, DateTimeField, BooleanField, DecimalField, SlugField
-)
+from django.db.models import Model, CharField, ForeignKey, CASCADE, \
+    ImageField,PositiveIntegerField, FloatField, TextField, \
+        DateTimeField, BooleanField, DecimalField, SlugField
+
+
+text = 'saskfalskfklasjkladfksakdflsfdfsafasfdaf\
+    adfkaslfdklksadfjkalsflkasfdjasdfasfd\
+        adsfkaslfjksdlfjaslkdfaslkdfjlkasdfjasdf\
+            dsflkjasfdlksajfdklsajdf\
+asdflkjasfdlksdjfklsajdfklsajkfdkdlsfj'
+
+
 from django.contrib.auth import get_user_model
 # from users.models import CustomUser
 from django.template.defaultfilters import slugify

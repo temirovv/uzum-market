@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'jazzmin',
+    'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -132,6 +133,7 @@ LOCALE_PATHS = [
     BASE_DIR / 'locale',
 ]
 
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
 
 
 # Static files (CSS, JavaScript, Images)
@@ -189,7 +191,7 @@ JAZZMIN_SETTINGS = {
 
     # List of model admins to search from the search bar, search bar omitted if excluded
     # If you want to use a single search field you dont need to use a list, you can use a simple string 
-    "search_model": ["auth.User", "auth.Group"],
+    # "search_model": ["auth.User", "auth.Group"],
 
     # Field name on user model that contains avatar ImageField/URLField/Charfield or a callable that receives the user
     "user_avatar": None,
@@ -211,7 +213,7 @@ JAZZMIN_SETTINGS = {
         {"model": "auth.User"},
 
         # App with dropdown menu to all its models pages (Permissions checked against models)
-        {"app": "books"},
+        # {"app": "product"},
     ],
 
     #############
@@ -303,3 +305,15 @@ JAZZMIN_SETTINGS = {
     
 #     "theme": "slate",
 # }
+
+
+# ngzx npgq thrw dcvg
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'temirovv21@gmail.com'
+EMAIL_HOST_PASSWORD = 'ngzxnpgqthrwdcvg'
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+

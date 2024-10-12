@@ -7,6 +7,8 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 
+from django.urls import reverse
+from django.core.mail import send_mail
 
 from .models import Product, Cart, CartItem
 from users.models import CustomUser, UserTypeChoices
@@ -24,7 +26,7 @@ def product_list(request):
     context = {
         'products': products
     }
-    return render(request, 'products/product-list.html', context=context)
+    return render(request, 'products/product-grid.html', context=context)
 
 
 def product_detail(request, slug):
@@ -94,3 +96,14 @@ def delete_cart_item_view(request):
         return JsonResponse(data={'status':'okey'})
 
     return JsonResponse(data={'status':'error'})
+
+
+def pochta_junat(request):
+    send_mail(
+        'Back',
+        "San bu emailni birinchi bolib qabul qilding",
+        'temirovv21@gmail.com',
+        ['azizabduqahhorov07@gmail.com']
+    )
+
+    return redirect(reverse('product_list'))
