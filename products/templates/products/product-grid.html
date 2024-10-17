@@ -78,8 +78,8 @@
           <nav class="navbar navbar-light navbar-glass navbar-top navbar-expand">
 
             <button class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarVerticalCollapse" aria-controls="navbarVerticalCollapse" aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
-            <a class="navbar-brand me-1 me-sm-3" href="../../../index.html">
-              <div class="d-flex align-items-center"><img class="me-2" src="../../../assets/img/icons/spot-illustrations/falcon.png" alt="" width="40" /><span class="font-sans-serif">falcon</span>
+            <a class="navbar-brand me-1 me-sm-3" href="{% static 'products/index.html' %}">
+              <div class="d-flex align-items-center"><img class="me-2" src="{% static 'products/assets/img/icons/spot-illustrations/falcon.png' %}" alt="" width="40" /><span class="font-sans-serif">falcon</span>
               </div>
             </a>
             <ul class="navbar-nav align-items-center d-none d-lg-block">
@@ -95,14 +95,14 @@
                   </div>
                   <div class="dropdown-menu border font-base start-0 mt-2 py-0 overflow-hidden w-100">
                     <div class="scrollbar list py-3" style="max-height: 24rem;">
-                      <h6 class="dropdown-header fw-medium text-uppercase px-card fs--2 pt-0 pb-2">Recently Browsed</h6><a class="dropdown-item fs--1 px-card py-1 hover-primary" href="../../../app/events/event-detail.html">
+                      <h6 class="dropdown-header fw-medium text-uppercase px-card fs--2 pt-0 pb-2">Recently Browsed</h6><a class="dropdown-item fs--1 px-card py-1 hover-primary" href="{% static 'products/app/events/event-detail.html' %}">
                         <div class="d-flex align-items-center">
                           <span class="fas fa-circle me-2 text-300 fs--2"></span>
 
                           <div class="fw-normal title">Pages <span class="fas fa-chevron-right mx-1 text-500 fs--2" data-fa-transform="shrink-2"></span> Events</div>
                         </div>
                       </a>
-                      <a class="dropdown-item fs--1 px-card py-1 hover-primary" href="../../../app/e-commerce/customers.html">
+                      <a class="dropdown-item fs--1 px-card py-1 hover-primary" href="{% static 'products/app/e-commerce/customers.html' %}">
                         <div class="d-flex align-items-center">
                           <span class="fas fa-circle me-2 text-300 fs--2"></span>
 
@@ -111,17 +111,17 @@
                       </a>
 
                       <hr class="bg-200 dark__bg-900" />
-                      <h6 class="dropdown-header fw-medium text-uppercase px-card fs--2 pt-0 pb-2">Suggested Filter</h6><a class="dropdown-item px-card py-1 fs-0" href="../../../app/e-commerce/customers.html">
+                      <h6 class="dropdown-header fw-medium text-uppercase px-card fs--2 pt-0 pb-2">Suggested Filter</h6><a class="dropdown-item px-card py-1 fs-0" href="{% static 'products/app/e-commerce/customers.html' %}">
                         <div class="d-flex align-items-center"><span class="badge fw-medium text-decoration-none me-2 badge-soft-warning">customers:</span>
                           <div class="flex-1 fs--1 title">All customers list</div>
                         </div>
                       </a>
-                      <a class="dropdown-item px-card py-1 fs-0" href="../../../app/events/event-detail.html">
+                      <a class="dropdown-item px-card py-1 fs-0" href="{% static 'products/app/events/event-detail.html' %}">
                         <div class="d-flex align-items-center"><span class="badge fw-medium text-decoration-none me-2 badge-soft-success">events:</span>
                           <div class="flex-1 fs--1 title">Latest events in current month</div>
                         </div>
                       </a>
-                      <a class="dropdown-item px-card py-1 fs-0" href="../../../app/e-commerce/product/product-grid.html">
+                      <a class="dropdown-item px-card py-1 fs-0" href="{% static 'products/app/e-commerce/product/product-grid.html' %}">
                         <div class="d-flex align-items-center"><span class="badge fw-medium text-decoration-none me-2 badge-soft-info">products:</span>
                           <div class="flex-1 fs--1 title">Most popular products</div>
                         </div>
@@ -130,7 +130,7 @@
                       <hr class="bg-200 dark__bg-900" />
                       <h6 class="dropdown-header fw-medium text-uppercase px-card fs--2 pt-0 pb-2">Files</h6><a class="dropdown-item px-card py-2" href="#!">
                         <div class="d-flex align-items-center">
-                          <div class="file-thumbnail me-2"><img class="border h-100 w-100 fit-cover rounded-3" src="../../../assets/img/products/3-thumb.png" alt="" /></div>
+                          <div class="file-thumbnail me-2"><img class="border h-100 w-100 fit-cover rounded-3" src="{% static 'products/assets/img/products/3-thumb.png' %}" alt="" /></div>
                           <div class="flex-1">
                             <h6 class="mb-0 title">iPhone</h6>
                             <p class="fs--2 mb-0 d-flex"><span class="fw-semi-bold">Antony</span><span class="fw-medium text-600 ms-2">27 Sep at 10:30 AM</span></p>
@@ -139,7 +139,7 @@
                       </a>
                       <a class="dropdown-item px-card py-2" href="#!">
                         <div class="d-flex align-items-center">
-                          <div class="file-thumbnail me-2"><img class="img-fluid" src="../../../assets/img/icons/zip.png" alt="" /></div>
+                          <div class="file-thumbnail me-2"><img class="img-fluid" src="{% static 'products/assets/img/icons/zip.png' %}" alt="" /></div>
                           <div class="flex-1">
                             <h6 class="mb-0 title">Falcon v1.8.2</h6>
                             <p class="fs--2 mb-0 d-flex"><span class="fw-semi-bold">John</span><span class="fw-medium text-600 ms-2">30 Sep at 12:30 PM</span></p>
@@ -148,10 +148,10 @@
                       </a>
 
                       <hr class="bg-200 dark__bg-900" />
-                      <h6 class="dropdown-header fw-medium text-uppercase px-card fs--2 pt-0 pb-2">Members</h6><a class="dropdown-item px-card py-2" href="../../../pages/user/profile.html">
+                      <h6 class="dropdown-header fw-medium text-uppercase px-card fs--2 pt-0 pb-2">Members</h6><a class="dropdown-item px-card py-2" href="{% static 'products/pages/user/profile.html' %}">
                         <div class="d-flex align-items-center">
                           <div class="avatar avatar-l status-online me-2">
-                            <img class="rounded-circle" src="../../../assets/img/team/1.jpg" alt="" />
+                            <img class="rounded-circle" src="{% static 'products/assets/img/team/1.jpg' %}" alt="" />
 
                           </div>
                           <div class="flex-1">
@@ -160,10 +160,10 @@
                           </div>
                         </div>
                       </a>
-                      <a class="dropdown-item px-card py-2" href="../../../pages/user/profile.html">
+                      <a class="dropdown-item px-card py-2" href="{% static 'products/pages/user/profile.html' %}">
                         <div class="d-flex align-items-center">
                           <div class="avatar avatar-l me-2">
-                            <img class="rounded-circle" src="../../../assets/img/team/2.jpg" alt="" />
+                            <img class="rounded-circle" src="{% static 'products/assets/img/team/2.jpg' %}" alt="" />
 
                           </div>
                           <div class="flex-1">
@@ -172,10 +172,10 @@
                           </div>
                         </div>
                       </a>
-                      <a class="dropdown-item px-card py-2" href="../../../pages/user/profile.html">
+                      <a class="dropdown-item px-card py-2" href="{% static 'products/pages/user/profile.html' %}">
                         <div class="d-flex align-items-center">
                           <div class="avatar avatar-l me-2">
-                            <img class="rounded-circle" src="../../../assets/img/team/3.jpg" alt="" />
+                            <img class="rounded-circle" src="{% static 'products/assets/img/team/3.jpg' %}" alt="" />
 
                           </div>
                           <div class="flex-1">
@@ -202,7 +202,7 @@
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link px-0 notification-indicator notification-indicator-warning notification-indicator-fill fa-icon-wait" href="../../../app/e-commerce/shopping-cart.html"><span class="fas fa-shopping-cart" data-fa-transform="shrink-7" style="font-size: 33px;"></span><span class="notification-indicator-number">1</span></a>
+                <a class="nav-link px-0 notification-indicator notification-indicator-warning notification-indicator-fill fa-icon-wait" href="{% static 'products/app/e-commerce/shopping-cart.html' %}"><span class="fas fa-shopping-cart" data-fa-transform="shrink-7" style="font-size: 33px;"></span><span class="notification-indicator-number">1</span></a>
 
               </li>
               <li class="nav-item dropdown">
@@ -224,7 +224,7 @@
                           <a class="notification notification-flush notification-unread" href="#!">
                             <div class="notification-avatar">
                               <div class="avatar avatar-2xl me-3">
-                                <img class="rounded-circle" src="../../../assets/img/team/1-thumb.png" alt="" />
+                                <img class="rounded-circle" src="{% static 'products/assets/img/team/1-thumb.png' %}" alt="" />
 
                               </div>
                             </div>
@@ -256,7 +256,7 @@
                           <a class="notification notification-flush" href="#!">
                             <div class="notification-avatar">
                               <div class="avatar avatar-2xl me-3">
-                                <img class="rounded-circle" src="../../../assets/img/icons/weather-sm.jpg" alt="" />
+                                <img class="rounded-circle" src="{% static 'products/assets/img/icons/weather-sm.jpg' %}" alt="" />
 
                               </div>
                             </div>
@@ -272,7 +272,7 @@
                           <a class="border-bottom-0 notification-unread  notification notification-flush" href="#!">
                             <div class="notification-avatar">
                               <div class="avatar avatar-xl me-3">
-                                <img class="rounded-circle" src="../../../assets/img/logos/oxford.png" alt="" />
+                                <img class="rounded-circle" src="{% static 'products/assets/img/logos/oxford.png' %}" alt="" />
 
                               </div>
                             </div>
@@ -288,7 +288,7 @@
                           <a class="border-bottom-0 notification notification-flush" href="#!">
                             <div class="notification-avatar">
                               <div class="avatar avatar-xl me-3">
-                                <img class="rounded-circle" src="../../../assets/img/team/10.jpg" alt="" />
+                                <img class="rounded-circle" src="{% static 'products/assets/img/team/10.jpg' %}" alt="" />
 
                               </div>
                             </div>
@@ -302,14 +302,14 @@
                         </div>
                       </div>
                     </div>
-                    <div class="card-footer text-center border-top"><a class="card-link d-block" href="../../../app/social/notifications.html">View all</a></div>
+                    <div class="card-footer text-center border-top"><a class="card-link d-block" href="{% static 'products/app/social/notifications.html' %}">View all</a></div>
                   </div>
                 </div>
 
               </li>
               <li class="nav-item dropdown"><a class="nav-link pe-0" id="navbarDropdownUser" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <div class="avatar avatar-xl">
-                    <img class="rounded-circle" src="../../../assets/img/team/3-thumb.png" alt="" />
+                    <img class="rounded-circle" src="{% static 'products/assets/img/team/3-thumb.png' %}" alt="" />
 
                   </div>
                 </a>
@@ -319,12 +319,12 @@
 
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#!">Set status</a>
-                    <a class="dropdown-item" href="../../../pages/user/profile.html">Profile &amp; account</a>
+                    <a class="dropdown-item" href="{% static 'products/pages/user/profile.html' %}">Profile &amp; account</a>
                     <a class="dropdown-item" href="#!">Feedback</a>
 
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="../../../pages/user/settings.html">Settings</a>
-                    <a class="dropdown-item" href="../../../pages/authentication/card/logout.html">Logout</a>
+                    <a class="dropdown-item" href="{% static 'products/pages/user/settings.html' %}">Settings</a>
+                    <a class="dropdown-item" href="{% static 'products/pages/authentication/card/logout.html' %}">Logout</a>
                   </div>
                 </div>
               </li>
@@ -350,7 +350,7 @@
                         </div>
                       </form>
                     </div>
-                    <div class="col-auto pe-0"> <a class="text-600 px-1" href="../../../app/e-commerce/product/product-list.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Product List"><span class="fas fa-list-ul"></span></a></div>
+                    <div class="col-auto pe-0"> <a class="text-600 px-1" href="{% static 'products/app/e-commerce/product/product-list.html' %}" data-bs-toggle="tooltip" data-bs-placement="top" title="Product List"><span class="fas fa-list-ul"></span></a></div>
                   </div>
                 </div>
               </div>
@@ -366,7 +366,7 @@
                       <div class="position-relative rounded-top overflow-hidden"><a class="d-block" href="#"><img class="img-fluid rounded-top" src="{% static 'products/assets/img/products/2.jpg' %}" alt="" /></a><span class="badge rounded-pill bg-success position-absolute mt-2 me-2 z-index-2 top-0 end-0">New</span>
                       </div>
                       <div class="p-3">
-                        <h5 class="fs-0"><a class="text-dark" href="../../../app/e-commerce/product/product-details.html">Apple iMac Pro (27-inch with Retina 5K Display, 3.0GHz 10-core Intel Xeon W, 1TB SSD)</a></h5>
+                        <h5 class="fs-0"><a class="text-dark" href="{% static 'products/app/e-commerce/product/product-details.html' %}">Apple iMac Pro (27-inch with Retina 5K Display, 3.0GHz 10-core Intel Xeon W, 1TB SSD)</a></h5>
                         <p class="fs--1 mb-3"><a class="text-500" href="#!">Computer &amp; Accessories</a></p>
                         <h5 class="fs-md-2 text-warning mb-0 d-flex align-items-center mb-3"> $1199.5
                           <del class="ms-2 fs--1 text-500">$2399 </del>
@@ -477,20 +477,20 @@
           <div class="row gx-2">
             <div class="col-6">
               <input class="btn-check" id="themeSwitcherLight" name="theme-color" type="radio" value="light" data-theme-control="theme" />
-              <label class="btn d-inline-block btn-navbar-style fs--1" for="themeSwitcherLight"> <span class="hover-overlay mb-2 rounded d-block"><img class="img-fluid img-prototype mb-0" src="../../../assets/img/generic/falcon-mode-default.jpg" alt=""/></span><span class="label-text">Light</span></label>
+              <label class="btn d-inline-block btn-navbar-style fs--1" for="themeSwitcherLight"> <span class="hover-overlay mb-2 rounded d-block"><img class="img-fluid img-prototype mb-0" src="{% static 'products/assets/img/generic/falcon-mode-default.jpg' %}" alt=""/></span><span class="label-text">Light</span></label>
             </div>
             <div class="col-6">
               <input class="btn-check" id="themeSwitcherDark" name="theme-color" type="radio" value="dark" data-theme-control="theme" />
-              <label class="btn d-inline-block btn-navbar-style fs--1" for="themeSwitcherDark"> <span class="hover-overlay mb-2 rounded d-block"><img class="img-fluid img-prototype mb-0" src="../../../assets/img/generic/falcon-mode-dark.jpg" alt=""/></span><span class="label-text"> Dark</span></label>
+              <label class="btn d-inline-block btn-navbar-style fs--1" for="themeSwitcherDark"> <span class="hover-overlay mb-2 rounded d-block"><img class="img-fluid img-prototype mb-0" src="{% static 'products/assets/img/generic/falcon-mode-dark.jpg' %}" alt=""/></span><span class="label-text"> Dark</span></label>
             </div>
           </div>
         </div>
         <hr />
         <div class="d-flex justify-content-between">
-          <div class="d-flex align-items-start"><img class="me-2" src="../../../assets/img/icons/left-arrow-from-left.svg" width="20" alt="" />
+          <div class="d-flex align-items-start"><img class="me-2" src="{% static 'products/assets/img/icons/left-arrow-from-left.svg' %}" width="20" alt="" />
             <div class="flex-1">
               <h5 class="fs-0">RTL Mode</h5>
-              <p class="fs--1 mb-0">Switch your language direction </p><a class="fs--1" href="../../../documentation/customization/configuration.html">RTL Documentation</a>
+              <p class="fs--1 mb-0">Switch your language direction </p><a class="fs--1" href="{% static 'products/documentation/customization/configuration.html' %}">RTL Documentation</a>
             </div>
           </div>
           <div class="form-check form-switch">
@@ -499,10 +499,10 @@
         </div>
         <hr />
         <div class="d-flex justify-content-between">
-          <div class="d-flex align-items-start"><img class="me-2" src="../../../assets/img/icons/arrows-h.svg" width="20" alt="" />
+          <div class="d-flex align-items-start"><img class="me-2" src="{% static 'products/assets/img/icons/arrows-h.svg' %}" width="20" alt="" />
             <div class="flex-1">
               <h5 class="fs-0">Fluid Layout</h5>
-              <p class="fs--1 mb-0">Toggle container layout system </p><a class="fs--1" href="../../../documentation/customization/configuration.html">Fluid Documentation</a>
+              <p class="fs--1 mb-0">Toggle container layout system </p><a class="fs--1" href="{% static 'products/documentation/customization/configuration.html' %}">Fluid Documentation</a>
             </div>
           </div>
           <div class="form-check form-switch">
@@ -510,21 +510,21 @@
           </div>
         </div>
         <hr />
-        <div class="d-flex align-items-start"><img class="me-2" src="../../../assets/img/icons/paragraph.svg" width="20" alt="" />
+        <div class="d-flex align-items-start"><img class="me-2" src="{% static 'products/assets/img/icons/paragraph.svg' %}" width="20" alt="" />
           <div class="flex-1">
             <h5 class="fs-0 d-flex align-items-center">Navigation Position </h5>
             <p class="fs--1 mb-2">Select a suitable navigation system for your web application </p>
             <div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" id="option-navbar-vertical" type="radio" name="navbar" value="vertical" data-page-url="../../../modules/components/navs-and-tabs/vertical-navbar.html" data-theme-control="navbarPosition" />
+                <input class="form-check-input" id="option-navbar-vertical" type="radio" name="navbar" value="vertical" data-page-url="{% static 'products/modules/components/navs-and-tabs/vertical-navbar.html' %}" data-theme-control="navbarPosition" />
                 <label class="form-check-label" for="option-navbar-vertical">Vertical</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" id="option-navbar-top" type="radio" name="navbar" value="top" data-page-url="../../../modules/components/navs-and-tabs/top-navbar.html" data-theme-control="navbarPosition" />
+                <input class="form-check-input" id="option-navbar-top" type="radio" name="navbar" value="top" data-page-url="{% static 'products/modules/components/navs-and-tabs/top-navbar.html' %}" data-theme-control="navbarPosition" />
                 <label class="form-check-label" for="option-navbar-top">Top</label>
               </div>
               <div class="form-check form-check-inline me-0">
-                <input class="form-check-input" id="option-navbar-combo" type="radio" name="navbar" value="combo" data-page-url="../../../modules/components/navs-and-tabs/combo-navbar.html" data-theme-control="navbarPosition" />
+                <input class="form-check-input" id="option-navbar-combo" type="radio" name="navbar" value="combo" data-page-url="{% static 'products/modules/components/navs-and-tabs/combo-navbar.html' %}" data-theme-control="navbarPosition" />
                 <label class="form-check-label" for="option-navbar-combo">Combo</label>
               </div>
             </div>
@@ -533,28 +533,28 @@
         <hr />
         <h5 class="fs-0 d-flex align-items-center">Vertical Navbar Style</h5>
         <p class="fs--1 mb-0">Switch between styles for your vertical navbar </p>
-        <p> <a class="fs--1" href="../../../modules/components/navs-and-tabs/vertical-navbar.html#navbar-styles">See Documentation</a></p>
+        <p> <a class="fs--1" href="{% static 'products/modules/components/navs-and-tabs/vertical-navbar.html#navbar-styles' %}">See Documentation</a></p>
         <div class="btn-group d-block w-100 btn-group-navbar-style">
           <div class="row gx-2">
             <div class="col-6">
               <input class="btn-check" id="navbar-style-transparent" type="radio" name="navbarStyle" value="transparent" data-theme-control="navbarStyle" />
-              <label class="btn d-block w-100 btn-navbar-style fs--1" for="navbar-style-transparent"> <img class="img-fluid img-prototype" src="../../../assets/img/generic/default.png" alt="" /><span class="label-text"> Transparent</span></label>
+              <label class="btn d-block w-100 btn-navbar-style fs--1" for="navbar-style-transparent"> <img class="img-fluid img-prototype" src="{% static 'products/assets/img/generic/default.png' %}" alt="" /><span class="label-text"> Transparent</span></label>
             </div>
             <div class="col-6">
               <input class="btn-check" id="navbar-style-inverted" type="radio" name="navbarStyle" value="inverted" data-theme-control="navbarStyle" />
-              <label class="btn d-block w-100 btn-navbar-style fs--1" for="navbar-style-inverted"> <img class="img-fluid img-prototype" src="../../../assets/img/generic/inverted.png" alt="" /><span class="label-text"> Inverted</span></label>
+              <label class="btn d-block w-100 btn-navbar-style fs--1" for="navbar-style-inverted"> <img class="img-fluid img-prototype" src="{% static 'products/assets/img/generic/inverted.png' %}" alt="" /><span class="label-text"> Inverted</span></label>
             </div>
             <div class="col-6">
               <input class="btn-check" id="navbar-style-card" type="radio" name="navbarStyle" value="card" data-theme-control="navbarStyle" />
-              <label class="btn d-block w-100 btn-navbar-style fs--1" for="navbar-style-card"> <img class="img-fluid img-prototype" src="../../../assets/img/generic/card.png" alt="" /><span class="label-text"> Card</span></label>
+              <label class="btn d-block w-100 btn-navbar-style fs--1" for="navbar-style-card"> <img class="img-fluid img-prototype" src="{% static 'products/assets/img/generic/card.png' %}" alt="" /><span class="label-text"> Card</span></label>
             </div>
             <div class="col-6">
               <input class="btn-check" id="navbar-style-vibrant" type="radio" name="navbarStyle" value="vibrant" data-theme-control="navbarStyle" />
-              <label class="btn d-block w-100 btn-navbar-style fs--1" for="navbar-style-vibrant"> <img class="img-fluid img-prototype" src="../../../assets/img/generic/vibrant.png" alt="" /><span class="label-text"> Vibrant</span></label>
+              <label class="btn d-block w-100 btn-navbar-style fs--1" for="navbar-style-vibrant"> <img class="img-fluid img-prototype" src="{% static 'products/assets/img/generic/vibrant.png' %}" alt="" /><span class="label-text"> Vibrant</span></label>
             </div>
           </div>
         </div>
-        <div class="text-center mt-5"><img class="mb-4" src="../../../assets/img/icons/spot-illustrations/47.png" alt="" width="120" />
+        <div class="text-center mt-5"><img class="mb-4" src="{% static 'products/assets/img/icons/spot-illustrations/47.png' %}" alt="" width="120" />
           <h5>Like What You See?</h5>
           <p class="fs--1">Get Falcon now and create beautiful dashboards with hundreds of widgets.</p><a class="mb-3 btn btn-primary" href="https://themes.getbootstrap.com/product/falcon-admin-dashboard-webapp-template/" target="_blank">Purchase</a>
         </div>

@@ -1,4 +1,5 @@
 import json
+from lib2to3.fixes.fix_input import context
 
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import JsonResponse
@@ -12,6 +13,42 @@ from django.core.mail import send_mail
 
 from .models import Product, Cart, CartItem
 from users.models import CustomUser, UserTypeChoices
+from django.views.generic import View, TemplateView, DetailView, CreateView
+
+
+class ProductListTemplateView(TemplateView):
+    template_name = 'products/product-grid.html'
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+
+        products = Product.objects.all()
+
+        search_q = self.request.GET.get('q')
+        if search_q:
+            products = Product.objects.filter(  # noqa
+                Q(name__icontains=search_q) | Q(description__icontains=search_q)
+            )
+
+        context['products'] = products
+        print(f"{context=}")
+
+        return context
+
+class ProductListView(View):
+    def get(self, request, *args, **kwargs):
+        products = Product.objects.all()
+
+        search_q = request.GET.get('q')
+        if search_q:
+            products = Product.objects.filter(  # noqa
+                Q(name__icontains=search_q) | Q(description__icontains=search_q)
+            )
+
+        context = {
+            'products': products
+        }
+        return render(request, 'products/product-grid.html', context=context)
 
 
 def product_list(request):
@@ -19,7 +56,7 @@ def product_list(request):
 
     search_q = request.GET.get('q')
     if search_q:
-        products = Product.objects.filter(
+        products = Product.objects.filter( # noqa
             Q(name__icontains=search_q) | Q(description__icontains=search_q) 
         )
 

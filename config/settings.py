@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'products.apps.ProductsConfig',
     'users.apps.UsersConfig',
 
+
     # 3rd party apps
     'debug_toolbar'
 ]
